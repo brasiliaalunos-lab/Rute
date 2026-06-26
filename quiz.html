@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Quiz de Tecnologia</title>
+    <link rel="stylesheet" href="estilo3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <video autoplay loop muted id="video-fundo">
+        <source src="tecnologia.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+
+    <button id="logoutBtn">Sair</button>
+
+    <div class="envoltorio-conteudo">
+        <div id="container-inicio" class="container">
+            <h1>Super Quiz de Tecnologia</h1>
+            <p>Digite seu nome para começar a jornada!</p>
+            <input type="text" id="entrada-nome" placeholder="Seu nome aqui">
+            <p id="mensagem-erro" class="texto-erro oculto"></p>
+            <button id="btn-comecar">Começar o Quiz</button>
+        </div>
+
+        <div id="quiz-principal" class="container-quiz container oculto">
+            <div class="container-progresso">
+                <div id="barra-progresso" class="barra-progresso" style="width: 0%"></div>
+            </div>
+            
+            <div id="quiz">
+                <h2 id="pergunta"></h2>
+                <div id="opcoes"></div>
+                
+                <div id="mensagem-feedback"></div>
+
+                <div class="botoes-navegacao">
+                    <button id="botao-voltar" onclick="perguntaAnterior()">Voltar</button>
+                    <button id="botao-proximo" onclick="verificarResposta()">Verificar</button>
+                </div>
+            </div>
+            <div id="resultado" class="oculto">
+                <div id="mensagem"></div>
+                
+                <div class="estatisticas-resultado">
+                    <div class="caixa-estatistica">
+                        <h3>Acertos</h3>
+                        <div id="contador-acertos" class="valor-estatistica estatistica-correta">0</div>
+                        <p>Parabéns pelo conhecimento!</p>
+                    </div>
+                    <div class="caixa-estatistica">
+                        <h3>Erros</h3>
+                        <div id="contador-erros" class="valor-estatistica estatistica-incorreta">0</div>
+                        <p>Continue aprendendo!</p>
+                    </div>
+                </div>
+                
+                <button id="botao-reiniciar" onclick="reiniciarQuiz()">Jogar Novamente</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="som-acertou" src="acerto.ogg"></audio>
+    <audio id="som-errou" src="errou.mp3"></audio>
+    <audio id="som-sucesso" src="animal.mp3"></audio>
+    <audio id="som-derrota" src="errou.mp3"></audio>
+
+<!-- Agora o script é módulo para usar Firebase (import/export) -->
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+
+#video-fundo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    object-fit: cover;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #1d2b64;
+    color: #f0f0f0;
+}
+
+.envoltorio-conteudo {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.container {
+
+    background: rgba(20, 20, 30, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px 40px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#pergunta {
+    font-size: 1.3em;
+    min-height: 60px;
+}
+
+#opcoes {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    background: linear-gradient(45deg, #f09819, #edde5d);
+    color: #2c3e50;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.botoes-navegacao {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#botao-voltar {
+    background: linear-gradient(45deg, #8e9eab, #eef2f3);
+    color: #333;
+}
+
+.opcao {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #34136e;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box;
+}
+
+.opcao:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.opcao.selecionada {
+    background-color: #f09819;
+    border-color: #edde5d;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.opcoes-desabilitadas .opcao {
+    pointer-events: none;
+}
+
+#mensagem-feedback {
+    min-height: 30px;
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.feedback-correto {
+    color: #2ecc71;
+}
+.feedback-incorreto {
+    color: #e74c3c;
+}
+
+/* Estilo unificado para nome, e-mail e senha, esse muda */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #f0f0f0;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Foco bonitinho */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #f09819;
+    background-color: rgba(0, 0, 0, 0.35);
+    transform: translateY(-1px);
+}
+
+
+#mensagem {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.oculto { 
+    display: none; 
+}
+
+.texto-erro {
+    color: #ffb3b3;
+    font-size: 0.9em;
+    height: 20px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.entrada-erro { 
+    border: 1px solid #ff7070 !important; 
+}
+
+.texto-erro.oculto { 
+    opacity: 0; 
+}
+
+.container-progresso {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.barra-progresso {
+    height: 100%;
+    background: linear-gradient(45deg, #f09819, #edde5d);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+.estatisticas-resultado {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.caixa-estatistica {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 45%;
+}
+
+.caixa-estatistica h3 {
+    margin-top: 0;
+    font-size: 1em;
+}
+
+.valor-estatistica {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.estatistica-correta {
+    color: #2ecc71;
+}
+
+.estatistica-incorreta {
+    color: #e74c3c;
+}
+
+#botao-reiniciar {
+    background: linear-gradient(45deg, #8e44ad, #3498db);
+    margin-top: 20px;
+}
+
+
+
+
+
+/* Container específico para tela de login/cadastro */
+.container-auth {
+    max-width: 450px; /* Caixa um pouco menor para login/cadastro */
+}
+
+/* Ajuste da mensagem de autenticação abaixo dos botões */
+#mensagem-auth {
+    display: block;
+    text-align: center;
+    margin-top: 10px;       /* distância entre o botão e o texto */
+    margin-bottom: 5px;     /* leve respiro abaixo */
+    color: #ffb3b3;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* quando for sucesso (verde) */
+#mensagem-auth.sucesso {
+    color: #2ecc71;
+}
+
+#logoutBtn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#logoutBtn:hover {
+  background: darkred;
+}
+
+
