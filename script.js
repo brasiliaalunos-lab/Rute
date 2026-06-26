@@ -53,27 +53,19 @@ if (isQuizPage) {
 
 //  ARRAY DE PERGUNTAS DO QUIZ (VERSÃO CORRIGIDA)
 const perguntas = [
-    { pergunta: "O que significa 'Criar com IA'?", opcoes: ["Usar algoritmos para automatizar tarefas criativas", "Fazer cálculos matemáticos", "Editar vídeos manualmente", "Programar sem internet"], resposta: "Usar algoritmos para automatizar tarefas criativas" },
-    { pergunta: "Qual ferramenta de IA é famosa por gerar textos e responder perguntas?", opcoes: ["ChatGPT", "Photoshop", "Illustrator", "Zoom"], resposta: "ChatGPT" },
-    { pergunta: "O que é 'prompt' no contexto da IA?", opcoes: ["Um comando ou instrução dada à IA", "Um erro do sistema", "Um tipo de arquivo", "Uma ferramenta de edição"], resposta: "Um comando ou instrução dada à IA" },
-    { pergunta: "Em criação com IA, o que significa 'geração de imagem'?", opcoes: ["Produzir imagens novas a partir de descrições textuais", "Copiar imagens existentes", "Editar vídeos", "Converter texto em planilhas"], resposta: "Produzir imagens novas a partir de descrições textuais" },
-    { pergunta: "Qual dessas IAs é usada para criar músicas e sons originais?", opcoes: ["Suno AI", "ChatGPT", "Excel", "Notepad"], resposta: "Suno AI" },
-    { pergunta: "O que o termo 'deepfake' representa?", opcoes: ["Vídeo manipulado por IA para parecer real", "Um vírus de computador", "Um código-fonte aberto", "Um tipo de criptomoeda"], resposta: "Vídeo manipulado por IA para parecer real" },
-    { pergunta: "Qual é um dos riscos de criar conteúdo com IA?", opcoes: ["Geração de informações falsas ou plágio", "Acelerar o aprendizado", "Melhorar a criatividade", "Aumentar a produtividade"], resposta: "Geração de informações falsas ou plágio" },
-    { pergunta: "Qual é o principal objetivo de um Laboratório de Animação?", opcoes: ["Produzir vídeos caseiros", "Desenvolver projetos de animação e modelagem digital", "Montar computadores", "Criar planilhas no Excel"], resposta: "Desenvolver projetos de animação e modelagem digital" },
-    { pergunta: "Qual software é amplamente usado para modelagem e animação 3D?", opcoes: ["Photoshop", "Blender", "Word", "Audacity"], resposta: "Blender" },
-    { pergunta: "Na criação de personagens, o que define o 'conceito visual'?", opcoes: ["As cores e formas que representam a personalidade do personagem", "O código fonte do personagem", "A velocidade da animação", "O tipo de renderização"], resposta: "As cores e formas que representam a personalidade do personagem" },
-    { pergunta: "Em informática básica, o que é um sistema operacional?", opcoes: ["Um antivírus", "Um programa que gerencia o hardware e os softwares do computador", "Um jogo", "Um aplicativo de música"], resposta: "Um programa que gerencia o hardware e os softwares do computador" },
-    { pergunta: "Qual destes é um exemplo de sistema operacional?", opcoes: ["Google Chrome", "Windows 11", "Blender", "PowerPoint"], resposta: "Windows 11" },
-    { pergunta: "O que significa a sigla IA?", opcoes: ["Interface Analógica", "Inteligência Artificial", "Imagem Automática", "Informação Aleatória"], resposta: "Inteligência Artificial" },
-    { pergunta: "Qual ferramenta da IA pode gerar imagens a partir de texto?", opcoes: ["ChatGPT", "DALL·E", "Excel", "Google Docs"], resposta: "DALL·E" },
-    { pergunta: "O que é 'renderização' em animação 3D?", opcoes: ["Salvar o arquivo", "Converter o modelo 3D em uma imagem ou vídeo final", "Modelar um personagem", "Adicionar texturas"], resposta: "Converter o modelo 3D em uma imagem ou vídeo final" },
-    { pergunta: "Qual é a principal função do teclado em informática básica?", opcoes: ["Processar imagens", "Inserir dados e comandos no computador", "Exibir vídeos", "Aumentar o volume do som"], resposta: "Inserir dados e comandos no computador" },
-    { pergunta: "O que é BIG DATA?", opcoes: ["Pequeno banco de dados", "Grande volume de dados", "Não existem dados", "Um tipo de software"], resposta: "Grande volume de dados" },
-    { pergunta: "Qual das alternativas NÃO faz parte dos 5 Vs do Big Data?", opcoes: ["Volume", "Variedade", "Veracidade", "Virtualização"], resposta: "Virtualização" },
-    { pergunta: "Qual linguagem de programação é mais popular para análise de dados e IA?", opcoes: ["Java", "C#", "Python", "PHP"], resposta: "Python" },
-    { pergunta: "Qual desses protocolos é usado para envio de e-mails?", opcoes: ["HTTP", "FTP", "SMTP", "TCP"], resposta: "SMTP" }
+    { pergunta: "quantos 'Vs' existem no big data? ", opcoes: ["3 = velocidade, violinho, velhas", "5 = velocidade, volume, variedade, veracidade e valor", "6 = volume, verbos, valores, verdades, variedade e velocidades", "1 = valor"], resposta: "5 = velocidade, volume, variedade, veracidade e valor" },
+    { pergunta: "em qual dia e mês as torres gêmeas foram atingidas?", opcoes: ["2 de março", "30 de abril","9 de agosto", "11 de setembro"], resposta: "11 de setembro" },
+    { pergunta: "em qual america o Brasil está localizado?", opcoes: ["America do Sul", "America Central", "America do Norte", "America estadual"], resposta: "America do Sul" },
+    { pergunta: "qual acidente causou a morte de Oliver Tree?", opcoes: ["parada cardíaca", "perdido em uma ilha", "dois helicopteros colidiram", "10 facadas no estômago"], resposta: "dois helicopteros colidiram" },
+    { pergunta: "qual a capital do Japão?", opcoes: ["Tokyo", "Yokohama", "Kyoto","Osaka"], resposta: "Tokyo" },
+    { pergunta: "como se chama o fenômeno em que a água se congela? ", opcoes: ["evaporação", "solidificação", "gasoso", "gelo"], resposta: "solidificação" },
+    { pergunta: "as cores primárias são:", opcoes: ["vermelho, azul e verde", "vermelho, azul e amarelo", "vermelho, verde e azul", "amarelo, azul e roxo"], resposta: "vermelho, azul e amarelo" },
+    { pergunta: "qual o maior planeta do sistema solar?", opcoes: ["Júpiter", "Saturno", "Urano", "Netuno"], resposta: "Júpiter" },
+    { pergunta: "quem descobriu o Brasil?", opcoes: ["Pedro Álvares Cabral", "Cristovão Colombo", "Vasco da Gama", "Fernando de Magalhães"], resposta: "Pedro Álvares Cabral" },
+    { pergunta: "qual o maior oceano do mundo?", opcoes: ["Oceano Atlântico", "Oceano Índico", "Oceano Pacífico", "Oceano Ártico"], resposta: "Oceano Pacífico" }
+
 ];
+    
 
 //  VARIÁVEIS GLOBAIS DO QUIZ + ÁUDIOS + HISTÓRICO
 let indiceAtual = 0;
